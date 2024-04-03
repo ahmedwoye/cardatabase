@@ -37,7 +37,7 @@ public class CardatabaseApplication implements CommandLineRunner {
 		SpringApplication.run(CardatabaseApplication.class, args);
 		
 		logger.info("Application started");
-		System.out.print("We go reach there!");
+		System.out.print("We go reach there inshaAllahu!");
 		
 		
 	}

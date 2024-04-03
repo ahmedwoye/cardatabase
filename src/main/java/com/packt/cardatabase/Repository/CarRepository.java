@@ -4,19 +4,24 @@ import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.repository.query.Param;
+import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 import com.packt.cardatabase.domain.Car;
 
-public interface CarRepository extends JpaRepository<Car, Long> {
+
+@RepositoryRestResource
+public interface CarRepository extends CrudRepository<Car, Long> {
 	
 	// Fetch Cars by brand and model
 	
-	List<Car> findByBrand (String brand);
+	List<Car> findByBrand (@Param("brand") String brand);
 	
 	
 	//Fetch Cars by Brand or color
 	
-	List<Car> findByColor(String color);
+	List<Car> findByColor(@Param("color") String color);
 	
 	
 	//Fetch Cars by model year
