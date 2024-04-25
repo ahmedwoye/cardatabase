@@ -10,7 +10,6 @@ import jakarta.persistence.ManyToOne;
 
 
 @Entity
-
 public class Car {
 	
 	
